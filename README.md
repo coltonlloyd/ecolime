@@ -7,10 +7,6 @@ a ME-model for E. coli K-12 MG1655, *i*JL1678b-ME using
 [documentation](https://cobrame.readthedocs.io) for further instructions on 
 how to build and solve ME-models.
 
-**Note**: The current version of *i*JL1678b-ME is provided prior to peer-reviewed
-publication. The model may be edited and updated until it is finalized for 
-publication.
-
 
 ## Installation
 

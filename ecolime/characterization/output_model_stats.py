@@ -69,7 +69,9 @@ def output_model_reactions_stats(model, output_file, solution=None):
         rxn_types.add(rxn_type)
 
     for rxn_type in rxn_types:
-        df_filtered = df[df.rxn_type == rxn_type]
+        df_filtered = df[df.reaction_type == rxn_type]
+        df_filtered = df_filtered.T.dropna(how='all').T
+        df_filtered.set_index('id', inplace=True)
         df_filtered.to_excel(writer, sheet_name=rxn_type)
 
     writer.save()
@@ -100,7 +102,7 @@ def output_model_component_stats(model, output_file):
     for met_type in met_types:
         df_filtered = df[df.met_type == met_type]
         df_filtered = df_filtered.T.dropna(how='all').T
-        df_filtered.set_index('id')
+        df_filtered.set_index('id', inplace=True)
         df_filtered.to_excel(writer, sheet_name=met_type)
 
     writer.save()
@@ -125,7 +127,7 @@ def output_model_process_data_stats(model, output_file):
     for data_type in data_types:
         df_filtered = df[df.data_type == data_type]
         df_filtered = df_filtered.T.dropna(how='all').T
-        df_filtered.set_index('id')
+        df_filtered.set_index('id', inplace=True)
         df_filtered.to_excel(writer, sheet_name=data_type)
 
     writer.save()
