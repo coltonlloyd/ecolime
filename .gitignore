@@ -6,3 +6,9 @@ gurobi.log
 *.egg-info
 .idea/
 fort.*
+build/
+dist/
+.tox/
+.pytest_cache/
+.coverage
+.cache/
