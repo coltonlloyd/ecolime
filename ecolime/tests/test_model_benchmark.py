@@ -22,15 +22,15 @@ json_model = load_json_me_model('test_json_dump.json')
 
 def test_model_benchmark():
     benchmark_model = \
-        load_reduced_json_me_model(join(models_dir, 'iJL1678b_benchmark.json'))
-    difference = find_me_model_difference(benchmark_model, test_model, 1e-6)
+        load_reduced_json_me_model(join(models_dir, 'iJL1678b_reduced.json'))
+    difference = find_me_model_difference(benchmark_model, test_model, 1e-10)
     print('-----------------------Difference----------------------')
     print(difference)
     assert (len(difference) == 0)
 
 
 def test_full_json_dumping():
-    difference = find_me_model_difference(test_model, json_model, 1e-6)
+    difference = find_me_model_difference(test_model, json_model, 1e-10)
     print(difference)
     assert (len(difference) == 0)
 
