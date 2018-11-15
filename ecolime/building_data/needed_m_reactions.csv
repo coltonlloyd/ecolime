@@ -1,0 +1,217 @@
+Reaction	Metabolite	Compartment	Stoichiometry	Subsystem
+pqq_transport	pqq	Extra-organism	-1	
+pqq_transport	pqq	Cytosol	1	
+23bpg_generation	23bpg	Cytosol	1	ARTIFICIAL, CHECK!
+dpm_import	dpm	Cytosol	1	
+tl_generation	tl	Cytosol	1	
+Cs_peri_import	cs	Extra-organism	-1	
+Cs_peri_import	cs	Periplasm	1	
+Cs_cyto_import	cs	Periplasm	-1	
+Cs_cyto_import	h	Cytosol	1	
+Cs_cyto_import	cs	Cytosol	1	
+Cs_cyto_import	h	Periplasm	-1	
+hemeD_synthesis	h2o2	Cytosol	-1	
+hemeD_synthesis	hemed	Cytosol	1	
+hemeD_synthesis	pheme	Cytosol	-1	
+acp_lipoate_synthase	EG50003-MONOMER_mod_pan4p_mod_oc	Cytosol	-1	
+acp_lipoate_synthase	EG50003-MONOMER_mod_pan4p_mod_lipo	Cytosol	1	
+acp_lipoate_synthase	amet	Cytosol	-2	
+acp_lipoate_synthase	met__L	Cytosol	2	
+acp_lipoate_synthase	dad__5	Cytosol	2	
+acp_lipoate_synthase	CPLX0-782_mod_2:4fe4s	Cytosol	-1	
+acp_lipoate_synthase	CPLX0-782_mod_1:2fe2s_mod_1:4fe4s	Cytosol	1	
+acp_lipoate_synthase	fe2	Cytosol	2	
+acp_lipoate_synthase	h	Cytosol	-1	
+acp_lipoate_synthase	nad	Cytosol	-1	
+acp_lipoate_synthase	nadh	Cytosol	1	
+CPLX0-782_mod_4fe4s_regeneration	CPLX0-782_mod_1:2fe2s_mod_1:4fe4s	Cytosol	-1	
+CPLX0-782_mod_4fe4s_regeneration	2fe2s	Cytosol	-1	
+CPLX0-782_mod_4fe4s_regeneration	CPLX0-782_mod_2:4fe4s	Cytosol	1	
+SufBCD_mod_1:2Fe2S_mod_1:fe2atp_mediated_FE_loading	CPLX0-1341_mod_1:2fe2s_mod_2:fe2	Cytosol	1	
+SufBCD_mod_1:2Fe2S_mod_1:fe2atp_mediated_FE_loading	CPLX0-1341_mod_1:2fe2s_mod_1:fe2	Cytosol	-1	
+SufBCD_mod_1:2Fe2S_mod_1:fe2atp_mediated_FE_loading	adp	Cytosol	1	
+SufBCD_mod_1:2Fe2S_mod_1:fe2atp_mediated_FE_loading	pi	Cytosol	1	
+SufBCD_mod_1:2Fe2S_mod_1:fe2atp_mediated_FE_loading	atp	Cytosol	-1	
+SufBCD_mod_1:2Fe2S_mod_1:fe2atp_mediated_FE_loading	fe2	Cytosol	-1	
+SufBCD_mod_1:2Fe2S_mod_1:fe2atp_mediated_FE_loading	h2o	Cytosol	-1	
+SufBCD_mod_1:2Fe2S_mod_1:fe2atp_mediated_FE_loading	h	Cytosol	1	
+SufBCD_mod_1:2Fe2Satp_mediated_FE_loading	atp	Cytosol	-1	
+SufBCD_mod_1:2Fe2Satp_mediated_FE_loading	fe2	Cytosol	-1	
+SufBCD_mod_1:2Fe2Satp_mediated_FE_loading	CPLX0-1341_mod_1:2fe2s_mod_1:fe2	Cytosol	1	
+SufBCD_mod_1:2Fe2Satp_mediated_FE_loading	CPLX0-1341_mod_1:2fe2s	Cytosol	-1	
+SufBCD_mod_1:2Fe2Satp_mediated_FE_loading	pi	Cytosol	1	
+SufBCD_mod_1:2Fe2Satp_mediated_FE_loading	adp	Cytosol	1	
+SufBCD_mod_1:2Fe2Satp_mediated_FE_loading	h2o	Cytosol	-1	
+SufBCD_mod_1:2Fe2Satp_mediated_FE_loading	h	Cytosol	1	
+2Fe2S_to_IscA_by_IscU	pi	Cytosol	1	
+2Fe2S_to_IscA_by_IscU	IscU	Cytosol	1	
+2Fe2S_to_IscA_by_IscU	IscA_tetra	Cytosol	-1	
+2Fe2S_to_IscA_by_IscU	atp	Cytosol	-1	
+2Fe2S_to_IscA_by_IscU	IscA_tetra_mod_1:2fe2s	Cytosol	1	
+2Fe2S_to_IscA_by_IscU	IscU_mod_1:2fe2s	Cytosol	-1	
+2Fe2S_to_IscA_by_IscU	adp	Cytosol	1	
+2Fe2S_to_IscA_by_IscU	h2o	Cytosol	-1	
+2Fe2S_to_IscA_by_IscU	h	Cytosol	1	
+4Fe4S_to_ErpA_by_IscU	CPLX-7524_mod_mn2	Cytosol	-1	
+4Fe4S_to_ErpA_by_IscU	pi	Cytosol	1	
+4Fe4S_to_ErpA_by_IscU	CPLX-7524_mod_mn2_mod_1:4fe4s	Cytosol	1	
+4Fe4S_to_ErpA_by_IscU	IscU	Cytosol	1	
+4Fe4S_to_ErpA_by_IscU	IscU_mod_1:4fe4s	Cytosol	-1	
+4Fe4S_to_ErpA_by_IscU	atp	Cytosol	-1	
+4Fe4S_to_ErpA_by_IscU	adp	Cytosol	1	
+4Fe4S_to_ErpA_by_IscU	h2o	Cytosol	-1	
+4Fe4S_to_ErpA_by_IscU	h	Cytosol	1	
+4Fe4S_to_IscA_by_IscU	pi	Cytosol	1	
+4Fe4S_to_IscA_by_IscU	IscU	Cytosol	1	
+4Fe4S_to_IscA_by_IscU	IscA_tetra	Cytosol	-1	
+4Fe4S_to_IscA_by_IscU	atp	Cytosol	-1	
+4Fe4S_to_IscA_by_IscU	IscU_mod_1:4fe4s	Cytosol	-1	
+4Fe4S_to_IscA_by_IscU	IscA_tetra_mod_1:4fe4s	Cytosol	1	
+4Fe4S_to_IscA_by_IscU	adp	Cytosol	1	
+4Fe4S_to_IscA_by_IscU	h2o	Cytosol	-1	
+4Fe4S_to_IscA_by_IscU	h	Cytosol	1	
+SufBCD_mod_1:fe2atp_mediated_FE_loading	atp	Cytosol	-1	
+SufBCD_mod_1:fe2atp_mediated_FE_loading	fe2	Cytosol	-1	
+SufBCD_mod_1:fe2atp_mediated_FE_loading	CPLX0-1341_mod_1:fe2	Cytosol	-1	
+SufBCD_mod_1:fe2atp_mediated_FE_loading	adp	Cytosol	1	
+SufBCD_mod_1:fe2atp_mediated_FE_loading	pi	Cytosol	1	
+SufBCD_mod_1:fe2atp_mediated_FE_loading	CPLX0-1341_mod_2:fe2	Cytosol	1	
+SufBCD_mod_1:fe2atp_mediated_FE_loading	h2o	Cytosol	-1	
+SufBCD_mod_1:fe2atp_mediated_FE_loading	h	Cytosol	1	
+2Fe2S_to_SufA_by_IscU	pi	Cytosol	1	
+2Fe2S_to_SufA_by_IscU	IscU	Cytosol	1	
+2Fe2S_to_SufA_by_IscU	atp	Cytosol	-1	
+2Fe2S_to_SufA_by_IscU	IscU_mod_1:2fe2s	Cytosol	-1	
+2Fe2S_to_SufA_by_IscU	CPLX0-7824	Cytosol	-1	
+2Fe2S_to_SufA_by_IscU	adp	Cytosol	1	
+2Fe2S_to_SufA_by_IscU	CPLX0-7824_mod_1:2fe2s	Cytosol	1	
+2Fe2S_to_SufA_by_IscU	h2o	Cytosol	-1	
+2Fe2S_to_SufA_by_IscU	h	Cytosol	1	
+4Fe4S_to_SufA_by_IscU	pi	Cytosol	1	
+4Fe4S_to_SufA_by_IscU	IscU	Cytosol	1	
+4Fe4S_to_SufA_by_IscU	IscU_mod_1:4fe4s	Cytosol	-1	
+4Fe4S_to_SufA_by_IscU	atp	Cytosol	-1	
+4Fe4S_to_SufA_by_IscU	CPLX0-7824	Cytosol	-1	
+4Fe4S_to_SufA_by_IscU	CPLX0-7824_mod_1:4fe4s	Cytosol	1	
+4Fe4S_to_SufA_by_IscU	adp	Cytosol	1	
+4Fe4S_to_SufA_by_IscU	h2o	Cytosol	-1	
+4Fe4S_to_SufA_by_IscU	h	Cytosol	1	
+S_transfer_to_IscU_mod_1:2Fe2S_mod_1:2Fe1S	IscU_mod_1:2fe2s_mod_1:2fe1s	Cytosol	-1	
+S_transfer_to_IscU_mod_1:2Fe2S_mod_1:2Fe1S	IscU_mod_2:2fe2s	Cytosol	1	
+S_transfer_to_IscU_mod_1:2Fe2S_mod_1:2Fe1S	IscS_mod_2:pydx5p	Cytosol	1	
+S_transfer_to_IscU_mod_1:2Fe2S_mod_1:2Fe1S	IscS_mod_2:pydx5p_mod_1:SH	Cytosol	-1	
+S_transfer_to_IscU_mod_1:2Fe2S_mod_2:fe2	IscU_mod_1:2fe2s_mod_1:2fe1s	Cytosol	1	
+S_transfer_to_IscU_mod_1:2Fe2S_mod_2:fe2	IscS_mod_2:pydx5p	Cytosol	1	
+S_transfer_to_IscU_mod_1:2Fe2S_mod_2:fe2	IscU_mod_1:2fe2s_mod_2:fe2	Cytosol	-1	
+S_transfer_to_IscU_mod_1:2Fe2S_mod_2:fe2	IscS_mod_2:pydx5p_mod_1:SH	Cytosol	-1	
+S_transfer_to_IscU_mod_2:fe2	IscU_mod_2:fe2	Cytosol	-1	
+S_transfer_to_IscU_mod_2:fe2	IscS_mod_2:pydx5p	Cytosol	1	
+S_transfer_to_IscU_mod_2:fe2	IscS_mod_2:pydx5p_mod_1:SH	Cytosol	-1	
+S_transfer_to_IscU_mod_2:fe2	IscU_mod_1:2fe1s	Cytosol	1	
+S_transfer_to_SufBCD_mod_1:2Fe2S_mod_1:2Fe1S	CPLX0-246_CPLX0-1342_mod_pydx5p	Cytosol	1	
+S_transfer_to_SufBCD_mod_1:2Fe2S_mod_1:2Fe1S	CPLX0-246_CPLX0-1342_mod_pydx5p_mod_1:SH	Cytosol	-1	
+S_transfer_to_SufBCD_mod_1:2Fe2S_mod_1:2Fe1S	CPLX0-1341_mod_1:2fe2s_mod_1:2fe1s	Cytosol	-1	
+S_transfer_to_SufBCD_mod_1:2Fe2S_mod_1:2Fe1S	CPLX0-1341_mod_2:2fe2s	Cytosol	1	
+S_transfer_to_SufBCD_mod_2:fe2	CPLX0-1341_mod_1:2fe1s	Cytosol	1	
+S_transfer_to_SufBCD_mod_2:fe2	CPLX0-246_CPLX0-1342_mod_pydx5p_mod_1:SH	Cytosol	-1	
+S_transfer_to_SufBCD_mod_2:fe2	CPLX0-246_CPLX0-1342_mod_pydx5p	Cytosol	1	
+S_transfer_to_SufBCD_mod_2:fe2	CPLX0-1341_mod_2:fe2	Cytosol	-1	
+S_transfer_to_IscU_mod_1:2Fe1S	IscS_mod_2:pydx5p	Cytosol	1	
+S_transfer_to_IscU_mod_1:2Fe1S	IscU_mod_1:2fe2s	Cytosol	1	
+S_transfer_to_IscU_mod_1:2Fe1S	IscU_mod_1:2fe1s	Cytosol	-1	
+S_transfer_to_IscU_mod_1:2Fe1S	IscS_mod_2:pydx5p_mod_1:SH	Cytosol	-1	
+S_transfer_to_SufBCD_mod_1:2Fe1S	CPLX0-1341_mod_1:2fe1s	Cytosol	-1	
+S_transfer_to_SufBCD_mod_1:2Fe1S	CPLX0-246_CPLX0-1342_mod_pydx5p_mod_1:SH	Cytosol	-1	
+S_transfer_to_SufBCD_mod_1:2Fe1S	CPLX0-246_CPLX0-1342_mod_pydx5p	Cytosol	1	
+S_transfer_to_SufBCD_mod_1:2Fe1S	CPLX0-1341_mod_1:2fe2s	Cytosol	1	
+S_transfer_to_SufBCD_mod_1:2Fe2S_mod_2:fe2	CPLX0-1341_mod_1:2fe2s_mod_2:fe2	Cytosol	-1	
+S_transfer_to_SufBCD_mod_1:2Fe2S_mod_2:fe2	CPLX0-246_CPLX0-1342_mod_pydx5p_mod_1:SH	Cytosol	-1	
+S_transfer_to_SufBCD_mod_1:2Fe2S_mod_2:fe2	CPLX0-1341_mod_1:2fe2s_mod_1:2fe1s	Cytosol	1	
+S_transfer_to_SufBCD_mod_1:2Fe2S_mod_2:fe2	CPLX0-246_CPLX0-1342_mod_pydx5p	Cytosol	1	
+2Fe2S_to_ErpA_by_IscA	CPLX-7524_mod_mn2	Cytosol	-1	
+2Fe2S_to_ErpA_by_IscA	IscA_tetra	Cytosol	1	
+2Fe2S_to_ErpA_by_IscA	CPLX-7524_mod_mn2_mod_1:2fe2s	Cytosol	1	
+2Fe2S_to_ErpA_by_IscA	IscA_tetra_mod_1:2fe2s	Cytosol	-1	
+2Fe2S_to_ErpA_by_IscU	CPLX-7524_mod_mn2	Cytosol	-1	
+2Fe2S_to_ErpA_by_IscU	pi	Cytosol	1	
+2Fe2S_to_ErpA_by_IscU	IscU	Cytosol	1	
+2Fe2S_to_ErpA_by_IscU	CPLX-7524_mod_mn2_mod_1:2fe2s	Cytosol	1	
+2Fe2S_to_ErpA_by_IscU	atp	Cytosol	-1	
+2Fe2S_to_ErpA_by_IscU	IscU_mod_1:2fe2s	Cytosol	-1	
+2Fe2S_to_ErpA_by_IscU	adp	Cytosol	1	
+2Fe2S_to_ErpA_by_IscU	h2o	Cytosol	-1	
+2Fe2S_to_ErpA_by_IscU	h	Cytosol	1	
+2Fe2S_to_ErpA_by_SufA	CPLX-7524_mod_mn2	Cytosol	-1	
+2Fe2S_to_ErpA_by_SufA	CPLX0-7824	Cytosol	1	
+2Fe2S_to_ErpA_by_SufA	CPLX-7524_mod_mn2_mod_1:2fe2s	Cytosol	1	
+2Fe2S_to_ErpA_by_SufA	CPLX0-7824_mod_1:2fe2s	Cytosol	-1	
+2Fe2S_to_IscA_by_SufBCD	IscA_tetra_mod_1:2fe2s	Cytosol	1	
+2Fe2S_to_IscA_by_SufBCD	CPLX0-1341	Cytosol	1	
+2Fe2S_to_IscA_by_SufBCD	CPLX0-1341_mod_1:2fe2s	Cytosol	-1	
+2Fe2S_to_IscA_by_SufBCD	IscA_tetra	Cytosol	-1	
+4Fe4S_to_ErpA_by_IscA	CPLX-7524_mod_mn2	Cytosol	-1	
+4Fe4S_to_ErpA_by_IscA	IscA_tetra	Cytosol	1	
+4Fe4S_to_ErpA_by_IscA	CPLX-7524_mod_mn2_mod_1:4fe4s	Cytosol	1	
+4Fe4S_to_ErpA_by_IscA	IscA_tetra_mod_1:4fe4s	Cytosol	-1	
+4Fe4S_to_ErpA_by_SufA	CPLX-7524_mod_mn2	Cytosol	-1	
+4Fe4S_to_ErpA_by_SufA	CPLX0-7824	Cytosol	1	
+4Fe4S_to_ErpA_by_SufA	CPLX-7524_mod_mn2_mod_1:4fe4s	Cytosol	1	
+4Fe4S_to_ErpA_by_SufA	CPLX0-7824_mod_1:4fe4s	Cytosol	-1	
+4Fe4S_to_IscA_by_SufBCD	IscA_tetra_mod_1:4fe4s	Cytosol	1	
+4Fe4S_to_IscA_by_SufBCD	CPLX0-1341	Cytosol	1	
+4Fe4S_to_IscA_by_SufBCD	CPLX0-1341_mod_1:4fe4s	Cytosol	-1	
+4Fe4S_to_IscA_by_SufBCD	IscA_tetra	Cytosol	-1	
+CyaY_Fe_loading	EG11653-MONOMER	Cytosol	-1	
+CyaY_Fe_loading	EG11653-MONOMER_mod_1:fe2	Cytosol	1	
+CyaY_Fe_loading	fe2	Cytosol	-1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU	IscU	Cytosol	-1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU	EG11653-MONOMER	Cytosol	1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU	IscU_mod_1:fe2	Cytosol	1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU	EG11653-MONOMER_mod_1:fe2	Cytosol	-1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:fe2	IscU_mod_2:fe2	Cytosol	1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:fe2	EG11653-MONOMER	Cytosol	1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:fe2	IscU_mod_1:fe2	Cytosol	-1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:fe2	EG11653-MONOMER_mod_1:fe2	Cytosol	-1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S_mod_1:fe2	IscU_mod_1:2fe2s_mod_1:fe2	Cytosol	-1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S_mod_1:fe2	EG11653-MONOMER	Cytosol	1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S_mod_1:fe2	IscU_mod_1:2fe2s_mod_2:fe2	Cytosol	1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S_mod_1:fe2	EG11653-MONOMER_mod_1:fe2	Cytosol	-1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S	IscU_mod_1:2fe2s_mod_1:fe2	Cytosol	1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S	EG11653-MONOMER	Cytosol	1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S	EG11653-MONOMER_mod_1:fe2	Cytosol	-1	
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S	IscU_mod_1:2fe2s	Cytosol	-1	
+IscU_Fe_loading	IscU	Cytosol	-1	
+IscU_Fe_loading	IscU_mod_1:fe2	Cytosol	1	
+IscU_Fe_loading	fe2	Cytosol	-1	
+IscU_mod_1:fe2_Fe_loading	IscU_mod_2:fe2	Cytosol	1	
+IscU_mod_1:fe2_Fe_loading	IscU_mod_1:fe2	Cytosol	-1	
+IscU_mod_1:fe2_Fe_loading	fe2	Cytosol	-1	
+SufBCD_2:2fe2s_to_SufBCD_1:4fe4s	CPLX0-1341_mod_1:4fe4s	Cytosol	1	
+SufBCD_2:2fe2s_to_SufBCD_1:4fe4s	CPLX0-1341_mod_2:2fe2s	Cytosol	-1	
+SufBCDatp_mediated_FE_loading	CPLX0-1341	Cytosol	-1	
+SufBCDatp_mediated_FE_loading	atp	Cytosol	-1	
+SufBCDatp_mediated_FE_loading	fe2	Cytosol	-1	
+SufBCDatp_mediated_FE_loading	CPLX0-1341_mod_1:fe2	Cytosol	1	
+SufBCDatp_mediated_FE_loading	pi	Cytosol	1	
+SufBCDatp_mediated_FE_loading	adp	Cytosol	1	
+SufBCDatp_mediated_FE_loading	h2o	Cytosol	-1	
+SufBCDatp_mediated_FE_loading	h	Cytosol	1	
+BTS6	dad__5	Cytosol	1	corrected thiol donor
+BTS6	h	Cytosol	1	corrected thiol donor
+BTS6	dtbt	Cytosol	-1	corrected thiol donor
+BTS6	amet	Cytosol	-1	corrected thiol donor
+BTS6	met__L	Cytosol	1	corrected thiol donor
+BTS6	btn	Cytosol	1	corrected thiol donor
+BTS6	IscS_mod_2:pydx5p_mod_1:SH	Cytosol	-1	corrected thiol donor
+BTS6	IscS_mod_2:pydx5p	Cytosol	1	corrected thiol donor
+PDX5PS1	phthr	Cytosol	-1	unlump reaction
+PDX5PS1	co2	Cytosol	1	unlump reaction
+PDX5PS1	3a1hac1p	Cytosol	1	unlump reaction
+PDX5PS1	nadh	Cytosol	1	unlump reaction
+PDX5PS1	nad	Cytosol	-1	unlump reaction
+PDX5PS2	3a1hac1p	Cytosol	-1	unlump reaction
+PDX5PS2	dxyl5p	Cytosol	-1	unlump reaction
+PDX5PS2	h	Cytosol	1	unlump reaction
+PDX5PS2	pdx5p	Cytosol	1	unlump reaction
+PDX5PS2	pi	Cytosol	1	unlump reaction
+PDX5PS2	h2o	Cytosol	2	unlump reaction

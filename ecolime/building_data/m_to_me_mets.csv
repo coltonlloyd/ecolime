@@ -52,15 +52,15 @@ dsbgox_p,DSBG-CPLX_mod_Oxidized
 dsbgrd_p,DSBG-CPLX
 egmeACP_c,EG50003-MONOMER_mod_pan4p_mod_egme
 epmeACP_c,EG50003-MONOMER_mod_pan4p_mod_epme
-flxr_c,FLAVODOXIN1-MONOMER
-flxso_c,FLAVODOXIN1-MONOMER_mod_Oxidized
+flxso_c,"FLAVODOXIN1-MONOMER_mod_Oxidized,FLAVODOXIN2-MONOMER_mod_Oxidized"
+flxr_c,"FLAVODOXIN1-MONOMER,FLAVODOXIN2-MONOMER"
 fmettrna_c,N/A
 glntrna_c,N/A
 glutrna_c,generic_tRNA_GAG_glu__L_c
 glytrna_c,N/A
 gmeACP_c,EG50003-MONOMER_mod_pan4p_mod_gme
-grxox_c,GLUTAREDOXIN-MONOMER_mod_Oxidized
-grxrd_c,GLUTAREDOXIN-MONOMER
+grxox_c,"GLUTAREDOXIN-MONOMER_mod_Oxidized,GRXC-MONOMER_mod_Oxidized,GRXB-MONOMER_mod_Oxidized,CPLX0-7817_mod_Oxidized"
+grxrd_c,"GLUTAREDOXIN-MONOMER,GRXC-MONOMER,GRXB-MONOMER,CPLX0-7817"
 hdeACP_c,EG50003-MONOMER_mod_pan4p_mod_hde
 hexACP_c,EG50003-MONOMER_mod_pan4p_mod_hex
 hgmeACP_c,EG50003-MONOMER_mod_pan4p_mod_hgme
@@ -116,8 +116,8 @@ tmrs2eACP_c,EG50003-MONOMER_mod_pan4p_mod_tmrs2e
 toct2eACP_c,EG50003-MONOMER_mod_pan4p_mod_toct2e
 toctd2eACP_c,EG50003-MONOMER_mod_pan4p_mod_toctd2e
 tpalm2eACP_c,EG50003-MONOMER_mod_pan4p_mod_tpalm2e
-trdox_c,RED-THIOREDOXIN-MONOMER_mod_Oxidized
-trdrd_c,RED-THIOREDOXIN-MONOMER
+trdox_c,"RED-THIOREDOXIN-MONOMER_mod_Oxidized,RED-THIOREDOXIN2-MONOMER_mod_Oxidized"
+trdrd_c,"RED-THIOREDOXIN-MONOMER,RED-THIOREDOXIN2-MONOMER"
 trnaala_c,N/A
 trnaarg_c,N/A
 trnaasn_c,N/A
@@ -143,5 +143,3 @@ trptrna_c,N/A
 tyrtrna_c,N/A
 valtrna_c,N/A
 wco_c,
-fldox_c,FLAVODOXIN1-MONOMER_mod_Oxidized
-fldrd_c,FLAVODOXIN1-MONOMER

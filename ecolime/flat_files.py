@@ -198,10 +198,45 @@ def remove_compartment(id_str):
     return id_str.replace('_c', '').replace('_p', '').replace('_e', '')
 
 
+def ensure_all_reactions_accounted_for(m_model):
+    df = pandas.read_csv('./building_data/reaction_matrix.txt', delimiter='\t',
+                     names=['Reaction', 'Met', 'Comp', 'Stoich'])
+    df2 = pandas.read_csv('./building_data/needed_m_reactions.csv', delimiter='\t')
+    df3 = pandas.read_csv('./building_data/rxns_to_delete.csv', delimiter='\t',
+                      index_col=0)
+    mapping = pandas.read_csv('./building_data/m_to_me_mets.csv',
+                          index_col=0).dropna()
+    text_rxns = set([i.replace('DASH', '') for i in df.Reaction.unique()])
+    model_rxns = set([i.id for i in m_model.reactions])
+    added_rxns = set(df2.Reaction.unique())
+    remove_rxns = set(df3.index)
+
+    # Compile all reactions with enzyme complex metabolites
+    unlumped_rxns = set()
+    for r in sorted(text_rxns.difference(model_rxns | added_rxns)):
+        dont = False
+        try:
+            for m in mapping.index:
+                if m in m_model.reactions.get_by_id(r[:-1]).reaction:
+                    dont = True
+                    unlumped_rxns.add(r[:-1])
+            if not dont:
+                print(r, m_model.reactions.get_by_id(r[:-1]).reaction)
+        except:
+            print(r)
+
+    # Make sure no reactions were present in model but not reaction_matrix.txt
+    for r in sorted((model_rxns | added_rxns).difference(
+            text_rxns | unlumped_rxns | remove_rxns)):
+        if r.startswith('EX_') or r.startswith('DM_'):
+            continue
+        print(r, m_model.reactions.get_by_id(r).reaction)
+
+
 def process_m_model(m_model, metabolites_file, m_to_me_map_file,
                     reaction_info_file, reaction_matrix_file,
                     protein_complex_file, defer_to_rxn_matrix=set()):
-
+    raise DeprecationWarning('No longer used')
     m_model = m_model.copy()
 
     met_info = pandas.read_csv(fixpath(metabolites_file), delimiter="\t",
@@ -265,6 +300,7 @@ def process_m_model(m_model, metabolites_file, m_to_me_map_file,
 
 
 def get_m_model():
+    raise DeprecationWarning('No longer used')
     m = cobra.Model("e_coli_ME_M_portion")
     m.compartments = {"p": "Periplasm", "e": "Extra-organism", "c": "Cytosol"}
     compartment_lookup = {v: k for k, v in iteritems(m.compartments)}
