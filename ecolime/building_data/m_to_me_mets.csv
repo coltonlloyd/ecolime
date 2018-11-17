@@ -3,7 +3,7 @@ m_name,me_name
 3haACP_c,EG50003-MONOMER_mod_pan4p_mod_3ha
 3hcddec5eACP_c,EG50003-MONOMER_mod_pan4p_mod_3hcddec5e
 3hcmrs7eACP_c,EG50003-MONOMER_mod_pan4p_mod_3hcmrs7e
-3hcpalm9eACP_c,EG50003-MONOMER_mod_pan4p_mod_3hpalm
+3hcpalm9eACP_c,EG50003-MONOMER_mod_pan4p_mod_3hcpalm9e
 3hcvac11eACP_c,EG50003-MONOMER_mod_pan4p_mod_3hcvac11e
 3hddecACP_c,EG50003-MONOMER_mod_pan4p_mod_3hddec
 3hdecACP_c,EG50003-MONOMER_mod_pan4p_mod_3hdec
@@ -14,7 +14,7 @@ m_name,me_name
 3hpalmACP_c,EG50003-MONOMER_mod_pan4p_mod_3hpalm
 3ocddec5eACP_c,EG50003-MONOMER_mod_pan4p_mod_3ocddec5e
 3ocmrs7eACP_c,EG50003-MONOMER_mod_pan4p_mod_3ocmrs7e
-3ocpalm9eACP_c,EG50003-MONOMER_mod_pan4p_mod_3opalm
+3ocpalm9eACP_c,EG50003-MONOMER_mod_pan4p_mod_3ocpalm9e
 3ocvac11eACP_c,EG50003-MONOMER_mod_pan4p_mod_3ocvac11e
 3oddecACP_c,EG50003-MONOMER_mod_pan4p_mod_3oddec
 3odecACP_c,EG50003-MONOMER_mod_pan4p_mod_3odec
@@ -59,8 +59,8 @@ glntrna_c,N/A
 glutrna_c,generic_tRNA_GAG_glu__L_c
 glytrna_c,N/A
 gmeACP_c,EG50003-MONOMER_mod_pan4p_mod_gme
-grxox_c,"GLUTAREDOXIN-MONOMER_mod_Oxidized,GRXC-MONOMER_mod_Oxidized,GRXB-MONOMER_mod_Oxidized,CPLX0-7817_mod_Oxidized"
-grxrd_c,"GLUTAREDOXIN-MONOMER,GRXC-MONOMER,GRXB-MONOMER,CPLX0-7817"
+grxox_c,"GLUTAREDOXIN-MONOMER_mod_Oxidized,GRXB-MONOMER_mod_Oxidized,CPLX0-7817_mod_Oxidized,GRXC-MONOMER_mod_Oxidized"
+grxrd_c,"GLUTAREDOXIN-MONOMER,GRXB-MONOMER,CPLX0-7817,GRXC-MONOMER"
 hdeACP_c,EG50003-MONOMER_mod_pan4p_mod_hde
 hexACP_c,EG50003-MONOMER_mod_pan4p_mod_hex
 hgmeACP_c,EG50003-MONOMER_mod_pan4p_mod_hgme
@@ -80,7 +80,7 @@ lystrna_c,N/A
 malACP_c,EG50003-MONOMER_mod_pan4p_mod_mal
 mettrna_c,N/A
 moadamp_c,EG11597-MONOMER_mod_amp
-moadcoo_c,EG11597-MONOMER_mod_coo
+moadcoo_c,EG11597-MONOMER
 moadcosh_c,EG11597-MONOMER_mod_cosh
 myrsACP_c,EG50003-MONOMER_mod_pan4p_mod_myrs
 ocACP_c,EG50003-MONOMER_mod_pan4p_mod_oc

@@ -1,0 +1,47 @@
+Reaction,Name,Lower Bound,Upper Bound,Subsystem,Spontaneous
+pqq_transport,pqq_transport,0,1000,,0
+23bpg_generation,23bpg_generation,0,1000,,0
+dpm_import,dpm_import,0,1000,,0
+tl_generation,tl_generation,0,1000,,0
+Cs_peri_import,Cs_peri_import,0,1000,,0
+Cs_cyto_import,Cs_cyto_import,0,1000,,0
+hemeD_synthesis,hemeD_synthesis,0,1000,,0
+acp_lipoate_synthase,acp_lipoate_synthase,0,1000,,1
+CPLX0-782_mod_4fe4s_regeneration,CPLX0-782_mod_4fe4s_regeneration,0,1000,,1
+SufBCD_mod_1:2Fe2S_mod_1:fe2atp_mediated_FE_loading,SufBCD_mod_1:2Fe2S_mod_1:fe2atp_mediated_FE_loading,0,1000,,0
+SufBCD_mod_1:2Fe2Satp_mediated_FE_loading,SufBCD_mod_1:2Fe2Satp_mediated_FE_loading,0,1000,,0
+2Fe2S_to_IscA_by_IscU,2Fe2S_to_IscA_by_IscU,0,1000,,0
+4Fe4S_to_ErpA_by_IscU,4Fe4S_to_ErpA_by_IscU,0,1000,,0
+4Fe4S_to_IscA_by_IscU,4Fe4S_to_IscA_by_IscU,0,1000,,0
+SufBCD_mod_1:fe2atp_mediated_FE_loading,SufBCD_mod_1:fe2atp_mediated_FE_loading,0,1000,,0
+2Fe2S_to_SufA_by_IscU,2Fe2S_to_SufA_by_IscU,0,1000,,0
+4Fe4S_to_SufA_by_IscU,4Fe4S_to_SufA_by_IscU,0,1000,,0
+S_transfer_to_IscU_mod_1:2Fe2S_mod_1:2Fe1S,S_transfer_to_IscU_mod_1:2Fe2S_mod_1:2Fe1S,0,1000,,0
+S_transfer_to_IscU_mod_1:2Fe2S_mod_2:fe2,S_transfer_to_IscU_mod_1:2Fe2S_mod_2:fe2,0,1000,,0
+S_transfer_to_IscU_mod_2:fe2,S_transfer_to_IscU_mod_2:fe2,0,1000,,0
+S_transfer_to_SufBCD_mod_1:2Fe2S_mod_1:2Fe1S,S_transfer_to_SufBCD_mod_1:2Fe2S_mod_1:2Fe1S,0,1000,,0
+S_transfer_to_SufBCD_mod_2:fe2,S_transfer_to_SufBCD_mod_2:fe2,0,1000,,0
+S_transfer_to_IscU_mod_1:2Fe1S,S_transfer_to_IscU_mod_1:2Fe1S,0,1000,,0
+S_transfer_to_SufBCD_mod_1:2Fe1S,S_transfer_to_SufBCD_mod_1:2Fe1S,0,1000,,0
+S_transfer_to_SufBCD_mod_1:2Fe2S_mod_2:fe2,S_transfer_to_SufBCD_mod_1:2Fe2S_mod_2:fe2,0,1000,,0
+2Fe2S_to_ErpA_by_IscA,2Fe2S_to_ErpA_by_IscA,0,1000,,0
+2Fe2S_to_ErpA_by_IscU,2Fe2S_to_ErpA_by_IscU,0,1000,,0
+2Fe2S_to_ErpA_by_SufA,2Fe2S_to_ErpA_by_SufA,0,1000,,0
+2Fe2S_to_IscA_by_SufBCD,2Fe2S_to_IscA_by_SufBCD,0,1000,,0
+4Fe4S_to_ErpA_by_IscA,4Fe4S_to_ErpA_by_IscA,0,1000,,0
+4Fe4S_to_ErpA_by_SufA,4Fe4S_to_ErpA_by_SufA,0,1000,,0
+4Fe4S_to_IscA_by_SufBCD,4Fe4S_to_IscA_by_SufBCD,0,1000,,0
+CyaY_Fe_loading,CyaY_Fe_loading,0,1000,,0
+Fe_transfer_CyaY_mod_1:fe2_to_IscU,Fe_transfer_CyaY_mod_1:fe2_to_IscU,0,1000,,0
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:fe2,Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:fe2,0,1000,,0
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S_mod_1:fe2,Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S_mod_1:fe2,0,1000,,0
+Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S,Fe_transfer_CyaY_mod_1:fe2_to_IscU_mod_1:2Fe2S,0,1000,,0
+IscU_Fe_loading,IscU_Fe_loading,0,1000,,0
+IscU_mod_1:fe2_Fe_loading,IscU_mod_1:fe2_Fe_loading,0,1000,,0
+SufBCD_2:2fe2s_to_SufBCD_1:4fe4s,SufBCD_2:2fe2s_to_SufBCD_1:4fe4s,0,1000,,0
+SufBCDatp_mediated_FE_loading,SufBCDatp_mediated_FE_loading,0,1000,,0
+BTS6,BTS6,0,1000,,0
+PDX5PS1,PDX5PS1,0,1000,,0
+PDX5PS2,PDX5PS2,0,1000,,0
+GLUTRR,glutamyl-tRNA reductase,0,1000,,0
+CU2R,CU2 Reduction,0,1000,,0

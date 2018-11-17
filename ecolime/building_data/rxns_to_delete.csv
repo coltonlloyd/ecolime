@@ -1,51 +1,54 @@
-reaction name	Reason for deletion
-S4FE4ST	cofactor synthesis
-S2FE2ST	cofactor synthesis
-I2FE2ST	cofactor synthesis
-I4FE4ST	cofactor synthesis
-S2FE2SS	cofactor synthesis
-S2FE2SS2	cofactor synthesis
-I2FE2SS	cofactor synthesis
-I2FE2SS2	cofactor synthesis
-I2FE2SR	cofactor synthesis
-S2FE2SR	cofactor synthesis
-S4FE4SR	cofactor synthesis
-WCOS	cofactor synthesis
-BWCOS	cofactor synthesis
-BWCOGDS2	cofactor synthesis
-BWCOGDS1	cofactor synthesis
-LIPAMPL	cofactor synthesis
-LIPOS	cofactor synthesis
-OCTNLL	cofactor synthesis
-LIPOCT	cofactor synthesis
-Ec_biomass_iJO1366_WT_53p95M	biomass reaction
-Ec_biomass_iJO1366_core_53p95M	biomass reaction
-PDX5PS	lumped reaction
-ILETRS	tRNA charging
-LEUTRS	tRNA charging
-VALTRS	tRNA charging
-TRPTRS	tRNA charging
-GLUTRS	tRNA charging
-ARGTRS	tRNA charging
-ALATRS	tRNA charging
-ASNTRS	tRNA charging
-THRTRS	tRNA charging
-LYSTRS	tRNA charging
-SERTRS	tRNA charging
-SERTRS2	tRNA charging
-CYSTRS	tRNA charging
-ASPTRS	tRNA charging
-GLYTRS	tRNA charging
-GLNTRS	tRNA charging
-PROTRS	tRNA charging
-PHETRS	tRNA charging
-METTRS	tRNA charging
-HISTRS	tRNA charging
-FMETTRS	tRNA charging
-TYRTRS	tRNA charging
-GLUTRR	cofactor synthesis
-SELCYSS	cofactor synthesis
-BTS5	wrong thiol donor
-FESD2s	cofactor damage/repair
-FESD1s	cofactor damage/repair
-FESR	cofactor damage/repair
+Reaction,Reason for deletion
+S4FE4ST,cofactor synthesis
+S2FE2ST,cofactor synthesis
+I2FE2ST,cofactor synthesis
+I4FE4ST,cofactor synthesis
+S2FE2SS,cofactor synthesis
+S2FE2SS2,cofactor synthesis
+I2FE2SS,cofactor synthesis
+I2FE2SS2,cofactor synthesis
+I2FE2SR,cofactor synthesis
+S2FE2SR,cofactor synthesis
+S4FE4SR,cofactor synthesis
+WCOS,cofactor synthesis
+BWCOS,cofactor synthesis
+BWCOGDS2,cofactor synthesis
+BWCOGDS1,cofactor synthesis
+LIPAMPL,cofactor synthesis
+LIPOS,cofactor synthesis
+OCTNLL,cofactor synthesis
+LIPOCT,cofactor synthesis
+Ec_biomass_iJO1366_WT_53p95M,biomass reaction
+Ec_biomass_iJO1366_core_53p95M,biomass reaction
+ATPM,maintenance funciton
+PDX5PS,lumped reaction
+ILETRS,tRNA charging
+LEUTRS,tRNA charging
+VALTRS,tRNA charging
+TRPTRS,tRNA charging
+GLUTRS,tRNA charging
+ARGTRS,tRNA charging
+ALATRS,tRNA charging
+ASNTRS,tRNA charging
+THRTRS,tRNA charging
+LYSTRS,tRNA charging
+SERTRS,tRNA charging
+SERTRS2,tRNA charging
+CYSTRS,tRNA charging
+ASPTRS,tRNA charging
+GLYTRS,tRNA charging
+GLNTRS,tRNA charging
+PROTRS,tRNA charging
+PHETRS,tRNA charging
+METTRS,tRNA charging
+HISTRS,tRNA charging
+FMETTRS,tRNA charging
+TYRTRS,tRNA charging
+GLUTRR,cofactor synthesis
+SELCYSS,cofactor synthesis
+BTS5,wrong thiol donor
+FESD2s,cofactor damage/repair
+FESD1s,cofactor damage/repair
+FESR,cofactor damage/repair
+ALPATE160pp,lpp handled explicitly
+ALPATG160pp,lpp handled explicitly

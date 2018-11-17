@@ -1,0 +1,13 @@
+Metabolite,Name,Formula,Compartment,Reason
+23bpg,"2,3-bisphosphoglycerate",C3H3O10P2,Cytosol,M_protein_recon
+3a1hac1p,3-amino-1-hydroxyacetone-1-phosphate,C3H7N05P,Cytosol,M_protein_recon
+cs,cesium ion,Cs,Periplasm,M_protein_recon
+cs,cesium ion,Cs,Extra-organism,M_protein_recon
+cs,cesium ion,Cs,Cytosol,M_protein_recon
+dpm,dipyrromethane,C20H20N2O8,Cytosol,M_protein_recon
+hemed,heme D,C34H32N4O6Fe,Cytosol,M_protein_recon
+pqq,pyrroloquinoline quinone,C14H3N2O8,Cytosol,M_protein_recon
+pqq,pyrroloquinoline quinone,C14H3N2O8,Extra-organism,M_protein_recon
+tl,thallium ion,Tl,Cytosol,M_protein_recon
+tqn,6-hydroxydopa quinone,C9H8NO4,Cytosol,check may not need
+LI,Lithium ion,Li,Cytosol,needed as cofactor

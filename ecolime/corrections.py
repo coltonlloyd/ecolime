@@ -22,6 +22,7 @@ making_iOL_model = False
 
 
 def update_metabolite_formulas(m_model):
+    raise DeprecationWarning('No longer needed')
     # Formulas of metabolites not included in metabolites.txt
     # 3a1hac1p_c has a typo in the formula in metabolites.txt
     formulas = [('4fe4s_c', 'Fe4S4'), ('2fe2s_c', 'Fe2S2'),

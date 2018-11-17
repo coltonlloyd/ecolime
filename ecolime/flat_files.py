@@ -199,13 +199,13 @@ def remove_compartment(id_str):
 
 
 def ensure_all_reactions_accounted_for(m_model):
-    df = pandas.read_csv('./building_data/reaction_matrix.txt', delimiter='\t',
+    df = pandas.read_csv(fixpath('reaction_matrix.txt'), delimiter='\t',
                      names=['Reaction', 'Met', 'Comp', 'Stoich'])
-    df2 = pandas.read_csv('./building_data/needed_m_reactions.csv', delimiter='\t')
-    df3 = pandas.read_csv('./building_data/rxns_to_delete.csv', delimiter='\t',
+    df2 = pandas.read_csv(fixpath('reactions_needed_for_me_model.csv'), delimiter='\t')
+    df3 = pandas.read_csv(fixpath('rxns_to_delete.csv'), delimiter='\t',
                       index_col=0)
-    mapping = pandas.read_csv('./building_data/m_to_me_mets.csv',
-                          index_col=0).dropna()
+    mapping = pandas.read_csv(fixpath('m_to_me_mets.csv'),
+                              index_col=0).dropna()
     text_rxns = set([i.replace('DASH', '') for i in df.Reaction.unique()])
     model_rxns = set([i.id for i in m_model.reactions])
     added_rxns = set(df2.Reaction.unique())
@@ -233,10 +233,218 @@ def ensure_all_reactions_accounted_for(m_model):
         print(r, m_model.reactions.get_by_id(r).reaction)
 
 
+def update_m_model_content_for_me(m_model, add_mets_file, remove_rxns_file,
+                                  add_rxns_file, add_rxns_info_file,
+                                  compartments):
+
+    """
+    Function to add model content required to create the ME-model
+    (e.g. iron-sulfur cluster synthesis reactions) and remove content that is
+    no longer needed (e.g., the biomass objective function).
+
+    All csv files passed into this function should be found in the
+    building_data directory.
+
+
+    Parameters
+    ----------
+    m_model  : :class:`cobra.core.model.Model`
+        Organism M-model that will be used as basis for ME-model
+
+    add_mets_file : str
+        Name of csv file defining all new metabolites that should be added to
+        the model
+
+    remove_rxns_file : str
+       Name of csv file listing all M-model reactions that should be excluded
+       from the ME-model
+
+    add_rxns_file : str
+        Name of csv file defining stoichiometries of new reactions that should
+        be added to the model
+
+    add_rxns_info_file : str
+        Name of csv file containing additional info (upper/lower bounds,
+         subsystem, etc.) for reactions in `add_rxns_file`
+
+    compartments : dict
+        Mapping of compartment names to single letter ids
+
+    Returns
+    -------
+    :class:`cobra.core.model.Model`
+        M-model with all of the described updates
+    """
+
+    m_model = m_model.copy()
+
+    add_mets = pandas.read_csv(fixpath(add_mets_file), index_col=0)
+    remove_rxns = pandas.read_csv(fixpath(remove_rxns_file), index_col=0)
+    add_rxns = pandas.read_csv(fixpath(add_rxns_file), index_col=0)
+    add_rxn_info = pandas.read_csv(fixpath(add_rxns_info_file), index_col=0)
+
+    # 1) Add new metabolites needed to produce the ME-model
+    compartments_dict = {k: i for i, k in compartments.items()}
+    for i, row in add_mets.iterrows():
+        try:
+            met_id = '_'.join([i, compartments_dict[row.Compartment]])
+        except KeyError:
+            raise UserWarning(
+                'Metabolite %s does not have a valid compartment' % i)
+
+        met_obj = cobra.Metabolite(met_id)
+        m_model.add_metabolites([met_obj])
+        met_obj.name = row.Name
+        met_obj.formula = row.Formula
+        met_obj.compartment = row.Compartment
+
+    # 2) Remove reactions that are no longer necessary
+    for rxn in remove_rxns.index:
+        m_model.reactions.get_by_id(rxn).remove_from_model()
+
+    # 3) Add new reactions needed for ME-model
+    reactions_wout_info = set(add_rxns.index).difference(
+        set(add_rxn_info.index))
+    if reactions_wout_info:
+        raise UserWarning(
+            'Reactions being added (%s) do not have their accompanying info' %
+            (str(reactions_wout_info)))
+
+    # Start by adding reaction information
+    for rxn, row in add_rxn_info.iterrows():
+        rxn_obj = cobra.Reaction(rxn)
+        m_model.add_reaction(rxn_obj)
+        rxn_obj.name = row['Name']
+        rxn_obj.lower_bound = row['Lower Bound']
+        rxn_obj.upper_bound = row['Upper Bound']
+        rxn_obj.subsystem = row.Subsystem
+        rxn_obj.gene_reaction_rule = 's0001' if row.Spontaneous else ''
+
+    # Compile stoichiometric information
+    add_rxn_stoich = defaultdict(dict)
+    for i, row in add_rxns.iterrows():
+        component_type = row['Component Type']
+        if component_type == 'Metabolite':
+            met_id = '_'.join(
+                [row.Metabolite, compartments_dict.get(row.Compartment)])
+            if met_id not in m_model.metabolites:
+                raise UserWarning(
+                    'Must add metabolite %s to model first' % met_id)
+        elif component_type == 'Complex':
+            met_id = row.Metabolite
+            met_obj = cobra.Metabolite(met_id)
+            m_model.add_metabolites(met_obj)
+        elif component_type == 'GenerictRNA':
+            met_id = '_'.join(
+                [row.Metabolite, compartments_dict.get(row.Compartment)])
+            met_obj = cobra.Metabolite(met_id)
+            m_model.add_metabolites(met_obj)
+        else:
+            raise UserWarning('Only metabolite and complex are currently '
+                              'handled')
+
+        stoich, subsystem = row[['Stoichiometry', 'Subsystem']].values
+
+        add_rxn_stoich[i].update({met_id: stoich})
+
+    # Update new reaction stoichiometries
+    for rxn, stoich in add_rxn_stoich.items():
+        m_model.reactions.get_by_id(rxn).add_metabolites(stoich)
+
+    return m_model
+
+
+def _get_m_reaction_stoichs_with_me_mets_inserted(model, rxn, m_to_me_dict,
+                                                  m_mets):
+    """
+
+    :param model:
+    :param rxn:
+    :param m_to_me_dict:
+    :param m_mets:
+    :return:
+    """
+
+    me_stoich = {}
+    old_stoich = rxn._metabolites.copy()
+
+    # Create dictionary of the number of new reactions needed to replace the
+    # m model reaction with all combinations of macromolecule isozymes
+    # {reaction#: {m_met1: me_met1, m_met2, me_met2}}
+    met_replace_dict = defaultdict(dict)
+    for met in m_mets:
+        for i, me_met in enumerate(m_to_me_dict[met].split(',')):
+            met_replace_dict[i][met] = me_met
+
+    # Some reactions have two different enzyme complexes to replace in the
+    # reaction with different numbers of isozymes (e.g., DSBDR).
+    # If this is the case, the number of metabolites to substitute will vary
+    # among the number of new reactions to add. If this happens, update
+    # with information from previous iterations.
+    # TODO this is not very robust and will not work for more complicated cases
+    prev_mets_to_replace = {}
+    for reaction_num in sorted(met_replace_dict):
+        new_mets_replaced = met_replace_dict[reaction_num]
+        mets_no_longer_replaced = set(prev_mets_to_replace).difference(
+            set(new_mets_replaced))
+        for met in mets_no_longer_replaced:
+            new_mets_replaced[met] = prev_mets_to_replace[met]
+        prev_mets_to_replace = new_mets_replaced
+
+    for num, met_replace in met_replace_dict.items():
+        new_stoich = old_stoich.copy()
+        for m_met, me_met in met_replace.items():
+            me_met_obj = cobra.Metabolite(me_met)
+            model.add_metabolites(me_met_obj)
+            new_stoich[me_met] = new_stoich.pop(
+                model.metabolites.get_by_id(m_met))
+
+        if not rxn.id.endswith('pp'):
+            new_rxn_id = rxn.id + str(num + 1)
+        else:
+            new_rxn_id = rxn.id.replace('pp', '%spp' % (num + 1))
+
+        me_stoich[new_rxn_id] = new_stoich
+
+    return me_stoich
+
+
+def replace_m_mets_with_macromolecules(m_model, m_to_me_mets_file):
+    m_to_me_mets = pandas.read_csv(fixpath(m_to_me_mets_file), index_col=0)
+    m_to_me_dict = m_to_me_mets.dropna().to_dict()['me_name']
+
+    m_model = m_model.copy()
+    reactions_to_swap = {}
+    for r in list(m_model.reactions):
+        m_mets_to_replace = []
+        for met in list(r.metabolites):
+            if met.id in m_to_me_dict:
+                m_mets_to_replace.append(met.id)
+        if m_mets_to_replace:
+            reactions_to_swap[r] = _get_m_reactions_with_me_mets_replaced(
+                m_model, r, m_to_me_dict, m_mets_to_replace)
+        if r == m_model.reactions.get_by_id('DSBDR'):
+            print(reactions_to_swap[r])
+
+    for r, new_rs in reactions_to_swap.items():
+        r.remove_from_model()
+    for r, new_rs in reactions_to_swap.items():
+        for new_r_id, new_stoich in new_rs.items():
+            new_r = r.copy()
+            new_r.id = new_r_id
+            m_model.add_reaction(new_r)
+            for metabolite in list(new_r._metabolites.keys()):
+                new_r.add_metabolites({metabolite: 0}, combine=False)
+            new_r.add_metabolites(new_stoich, combine=False)
+
+    return m_model
+
+
 def process_m_model(m_model, metabolites_file, m_to_me_map_file,
                     reaction_info_file, reaction_matrix_file,
                     protein_complex_file, defer_to_rxn_matrix=set()):
     raise DeprecationWarning('No longer used')
+
     m_model = m_model.copy()
 
     met_info = pandas.read_csv(fixpath(metabolites_file), delimiter="\t",
