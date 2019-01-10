@@ -421,8 +421,9 @@ def replace_m_mets_with_macromolecules(m_model, m_to_me_mets_file):
             if met.id in m_to_me_dict:
                 m_mets_to_replace.append(met.id)
         if m_mets_to_replace:
-            reactions_to_swap[r] = _get_m_reactions_with_me_mets_replaced(
-                m_model, r, m_to_me_dict, m_mets_to_replace)
+            reactions_to_swap[r] = \
+                _get_m_reaction_stoichs_with_me_mets_inserted(
+                    m_model, r, m_to_me_dict, m_mets_to_replace)
         if r == m_model.reactions.get_by_id('DSBDR'):
             print(reactions_to_swap[r])
 
